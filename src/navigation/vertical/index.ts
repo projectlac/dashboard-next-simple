@@ -15,12 +15,11 @@ const navigation = (): VerticalNavItemsType => {
     {
       title: 'Gói nạp',
       path: '/dashboard/pack'
+    },
+    {
+      title: 'Tin tức',
+      path: '/dashboard/news'
     }
-
-    // {
-    //   title: 'Tin tức',
-    //   path: '/dashboard/news'
-    // }
 
     // {
     //   title: 'Icons',

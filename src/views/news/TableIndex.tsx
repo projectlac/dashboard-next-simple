@@ -101,7 +101,7 @@ const rows: RowType[] = [
   }
 ]
 
-const DashboardTable = () => {
+const TableIndex = () => {
   return (
     <Card>
       <CardHeader
@@ -115,7 +115,7 @@ const DashboardTable = () => {
             }
           }
         }}
-        title='Danh sách game hiện có'
+        title='Danh sách tin tức'
         action={<Button variant='contained'>Thêm mới +</Button>}
       />
       <Divider />
@@ -123,8 +123,8 @@ const DashboardTable = () => {
         <Table sx={{ minWidth: 800 }} aria-label='table in dashboard'>
           <TableHead>
             <TableRow>
-              <TableCell>Tên game</TableCell>
-              <TableCell>Số lượng gói hiện tại</TableCell>
+              <TableCell>Tiêu đề</TableCell>
+              <TableCell>Mô tả</TableCell>
               <TableCell>Ngày cập nhật</TableCell>
               <TableCell>Thao tác</TableCell>
             </TableRow>
@@ -159,4 +159,4 @@ const DashboardTable = () => {
   )
 }
 
-export default DashboardTable
+export default TableIndex

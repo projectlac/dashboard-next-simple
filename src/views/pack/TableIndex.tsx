@@ -14,9 +14,11 @@ import Typography from '@mui/material/Typography'
 import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded'
 import EditIcon from '@mui/icons-material/Edit'
 import {
+  Button,
   CardHeader,
   Divider,
   FormControl,
+  IconButton,
   InputLabel,
   MenuItem,
   Select,
@@ -169,6 +171,8 @@ const TableIndex = () => {
 
   return (
     <Card>
+      <CardHeader action={<Button variant='contained'>Thêm mới +</Button>} />
+      <Divider />
       <CardHeader
         sx={{
           '& .MuiCardHeader-content': {
@@ -203,14 +207,16 @@ const TableIndex = () => {
         title='Dach sách gói nạp'
       />
       <Divider />
+
       <TableContainer>
         <Table sx={{ minWidth: 800 }} aria-label='table in dashboard'>
           <TableHead>
             <TableRow>
               <TableCell>Tên gói nạp</TableCell>
               <TableCell>Game</TableCell>
-              <TableCell>Giá tiền</TableCell>
               <TableCell>Điểm tích lũy</TableCell>
+
+              <TableCell>Giá tiền</TableCell>
               <TableCell>Ngày cập nhật</TableCell>
               <TableCell>Thao tác</TableCell>
             </TableRow>
@@ -230,8 +236,12 @@ const TableIndex = () => {
 
                 <TableCell>
                   <Box>
-                    <EditIcon sx={{ mr: 1 }} />
-                    <DeleteForeverRoundedIcon />
+                    <IconButton>
+                      <EditIcon sx={{ mr: 1 }} />
+                    </IconButton>
+                    <IconButton>
+                      <DeleteForeverRoundedIcon />
+                    </IconButton>
                   </Box>
                 </TableCell>
               </TableRow>

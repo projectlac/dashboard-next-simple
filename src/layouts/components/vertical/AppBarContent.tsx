@@ -1,13 +1,10 @@
 // ** MUI Imports
 import Box from '@mui/material/Box'
 import IconButton from '@mui/material/IconButton'
-import InputAdornment from '@mui/material/InputAdornment'
 import { Theme } from '@mui/material/styles'
-import TextField from '@mui/material/TextField'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
 // ** Icons Imports
-import Magnify from 'mdi-material-ui/Magnify'
 import Menu from 'mdi-material-ui/Menu'
 
 // ** Type Import
@@ -43,17 +40,6 @@ const AppBarContent = (props: Props) => {
             <Menu />
           </IconButton>
         ) : null}
-        <TextField
-          size='small'
-          sx={{ '& .MuiOutlinedInput-root': { borderRadius: 4 } }}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position='start'>
-                <Magnify fontSize='small' />
-              </InputAdornment>
-            )
-          }}
-        />
       </Box>
       <Box className='actions-right' sx={{ display: 'flex', alignItems: 'center' }}>
         <ModeToggler settings={settings} saveSettings={saveSettings} />
